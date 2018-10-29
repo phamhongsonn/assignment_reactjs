@@ -20,7 +20,7 @@ class Forecast extends React.Component {
 	}
 	render() {
 		var d = new Date();
-		var day = ["Sun","Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+		var day = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 		var ico = [];
 		var C = [];
 		var des = [];
@@ -32,7 +32,7 @@ class Forecast extends React.Component {
 		var datetime = [];
 		var mili = [];
 		var date = [];
-		var weekday= [];
+		var weekday = [];
 
 		if (this.state.Weather.length != 0) {
 			for (var i = 0; i < 10; i++) {
@@ -56,14 +56,8 @@ class Forecast extends React.Component {
 					<div className="row text-center">
 						<div className="col-lg-12 text-center">
 							<h2>{this.state.Weather.city_name}, {this.state.Weather.country_code}</h2>
-							<div className="row">
-							<div className="col-6 text-right">
-								<img src={ico[0]} alt=""></img>
-							</div>
-							<div  className="col-6 text-left">
-								<h1>{C[0]}<sup>o</sup>C</h1>
-							</div>
-							</div>
+							<img src={ico[0]} alt=""></img>
+							<h1>{C[0]}<sup>o</sup>C</h1>
 							<h2>{des[0]}</h2>
 							<p>Update of : {d.getHours()}:{d.getMinutes()}</p>
 							<div className="row">
